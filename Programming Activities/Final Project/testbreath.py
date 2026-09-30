@@ -3,8 +3,9 @@
 
 # Members: Cal Stewart, Kindah Qaissi, Meghan Tennant
 # Program start date: 9.23.2026
-# Last update: 9.28.2026
-# Update desc: Adjusted Ohmmeter logic on Pin A1 (GPIO 2) to trigger when resistance RISES above 1200 Ω
+# Last update: 9.30.2026
+# Update desc: Adjusted Ohmmeter logic on Pin A1 (GPIO 2) to trigger when resistance RISES above 1450 Ω
+# AI use: Integrated resistance measure to full program
 
 # GOAL: Move 52Pi stepper motor 90 degrees forward on switch press, water detection (Active LOW), 
 #       OR elevated humidity resistance (>= 1200 Ω).
@@ -41,7 +42,7 @@ MAX_VOLTAGE = 3.3      # Full-scale voltage reference in Volts
 # Threshold Settings
 WATER_THRESHOLD_VOLTS = 1.5         # Trigger when water voltage drops BELOW 1.5V
 R1_REF_OHMS = 220.0               # Known reference resistor (10 kΩ)
-RESISTANCE_THRESHOLD_OHMS = 1200.0  # Trigger threshold set between 1100 Ω and 1250 Ω
+RESISTANCE_THRESHOLD_OHMS = 1500.0  # Trigger threshold set between 1400 Ω and 1500 Ω
 
 # Output Pins Setup
 led = machine.Pin(10, machine.Pin.OUT)
